@@ -1,0 +1,33 @@
+//Sass for the layouts
+
+$grid-size: 12;
+$padding-gutter: 20px;
+
+@mixin clearfix() {
+	//Based from Nicolas Gallangher's clearfix hack
+    &:before, &:after {
+      content:" ";
+      display:table;
+    }
+
+    &:after {
+      clear:both;
+    }
+}
+
+
+@function columns($cols) {
+	@return round(((100% / $grid-size) * $cols));	
+}
+
+@mixin push($cols) {
+	margin-left: columns($cols);
+}
+
+@mixin pull($cols) {
+	margin-right: columns($cols);
+}
+
+@mixin gutter-padding($width: $padding-gutter) {
+	padding-left:$width;
+}

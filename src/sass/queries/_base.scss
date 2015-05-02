@@ -1,0 +1,467 @@
+//base styles for everything that isn't width specific
+
+/*================================
+GENERAL SETTINGS
+=================================*/
+
+$base-font-family: 'Lato', sans-serif;
+
+/*================================
+TYPOGRAPHIC SETTINGS
+=================================*/
+
+$base-font-size: 1rem;
+$base-line-height: 1.5rem;
+$measure: 760px; //47.5rem
+
+$h1-font-size: 1rem*3;
+$h1-line: 1.5rem;
+$h1-lines: 3;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 2 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: 1rem*2.25;
+$h2-line: 1.5rem;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 2 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: 1rem*2;
+$h3-line: 1.5rem;
+$h3-lines: 1.5;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 1 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: 1rem*1.5;
+$h4-line: 1.5rem;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 1 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+/*================================
+COLORS
+=================================*/
+
+$green: #5AC7AA;
+$l_green: #9ADCB9;
+$turq_green: #7ECECA;
+$d_green: #5C7E75;
+$orange: #FF9900;
+
+/*================================
+TINY RESET
+=================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $green;
+  color:#fff;
+}
+
+html, body {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  height: 100%;
+  width: 100%;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+body {
+  font-family: $base-font-family;
+}
+
+/*================================
+TYPOGRAPHY
+=================================*/
+
+.h1,.h2,.h3,.h4 {
+  font-weight: 400;
+}
+
+.h1 {
+  padding: 0 0 0 0;
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin: $h1-margin-top 0 $h1-margin-bottom 0;
+}
+
+.h2 {
+  padding: 0 0 0 0;
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin: $h2-margin-top 0 $h2-margin-bottom 0;
+}
+
+.h3 {
+  padding: 0 0 0 0;
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin: $h3-margin-top 0 $h3-margin-bottom 0;
+}
+
+.h4 {
+  padding: 0 0 0 0;
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+}
+
+p, ul {
+  padding: 0 0 0 0;
+  margin: $h4-margin-top 0 $h4-margin-bottom 0;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+img, iframe {
+  max-width: 100%;
+}
+
+img {
+  width: auto;
+  height:auto;
+}
+
+/*================================
+SIZE PRIMITIVES & BLOCKS
+=================================*/
+
+.container {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto 0 auto;
+  @include clearfix();
+}
+
+.section--padded {
+  padding: 80px 0;
+}
+
+.full {
+  width: columns(12);
+}
+
+.half {
+  width: columns(12);
+}
+
+.third {
+  width: columns(12);
+}
+
+.quarter {
+  width: columns(12);
+}
+
+//Used to contain images
+.media-holder {
+  text-align:center;
+}
+
+img, iframe {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+/*================================
+LAYOUT HELPERS
+=================================*/
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+/*================================
+TEXT MODIFIERS
+=================================*/
+
+.text--white {
+  color: #fff;
+}
+
+.text--grey {
+  color:#4a4a4a;
+}
+
+.text--w_light {
+  font-weight: 300;
+}
+
+/*================================
+BUTTON STYLES
+=================================*/
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.btn--orange {
+  background: $orange;
+  color: #fff;
+}
+
+.btn--big {
+  padding: 15px 25px;
+}
+
+/*================================
+BACKGROUND MODIFERS
+=================================*/
+
+.background--green {
+  background: $green;
+}
+
+.background--d_green {
+  background: $d_green;
+}
+
+.background--braid {
+  background: url('../assets/images/left-threads.png') 0 100% / auto 80% no-repeat, url('../assets/images/right-threads.png') 100% 100% / auto 80% no-repeat, url('../assets/images/bg.png') 50% 50% / cover no-repeat;
+}
+
+/*================================
+MAIN STYLES
+=================================*/
+
+.header {
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  padding: 1.25rem 0;
+}
+
+.logo {
+  width: 150px;
+  display: block;
+  margin-top: 5px;
+}
+
+.nav {
+  margin-top: 20px;
+  ul {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        margin-left: 3.125rem;
+        font-size: .875rem;
+      }
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 95%;
+}
+
+.hero__container {
+  padding-top: 180px;
+}
+
+
+.hero__logo {
+  margin: 0 auto 0 auto;
+  width: 250px;
+}
+
+.hero__text {
+  margin: 1.5rem 0 1rem 0
+}
+
+.hero__sub-text {
+  margin: 0 0 0 0;
+  font-weight: 300;
+}
+
+.hero__btn {
+  margin-top: 4.5rem;
+  padding: 15px 20px;
+}
+
+.quote {
+  margin: 0 auto 0 auto;
+  font-weight: 300;
+  font-style: italic;
+  width: columns(7);
+  line-height: 1.5em;
+
+  strong {
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+//lets try some flex stuff
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.explanation__description {
+  color: #4a4a4a;
+
+  p {
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+}
+
+.explanation__picture {
+  margin-top: 50px;
+  img {
+    display: block;
+    margin: 0 auto 0 auto;
+  }
+}
+
+.section--dashboard {
+  position: relative;
+  height:650px;
+  overflow: hidden;
+}
+
+.cta {
+  text-align: center;
+  padding: 100px 0 0 0;
+
+  .btn {
+    margin-left: -80px;
+    padding: 15px 20px;
+  }
+}
+
+.dashboard {
+  position: absolute;
+  bottom: -10px;
+  right:80px;
+
+  img {
+    max-width: 200%;
+    width: columns(12);
+  }
+}
+
+.service {
+  margin-top: 3rem;
+  padding: 1.125rem;
+}
+
+.service__status {
+  span {
+    font-weight: 300;
+    color:#4a4a4a;
+  }
+}
+
+.status__icon {
+  background: #efefef;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5px;
+  position:relative;
+  top: 2px;
+}
+
+.icon--green {
+  background: #7ED321;
+}
+
+.icon--orange {
+  background: #FFBE7E;
+}
+
+.service__icon {
+  padding-top: 1.5rem;
+}
+
+.service__description {
+  color: #4a4a4a;
+
+  p {
+    font-weight: 300;
+  }
+}
+
+.centered {
+  margin: 0 auto 0 auto;
+}
+
+.section--community {
+  position: relative;
+  overflow:hidden;
+}
+
+.braid-pattern {
+  position: absolute;
+  bottom: -30%;
+  right: 15%;
+
+  img {
+    width: columns(10);
+  }
+}
+
+.copyright {
+  padding: 3rem 0 0 0;
+  p {
+    color: rgba(255,255,255,0.5);
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    font-weight: 300;
+  }
+}
+
+.footer-nav {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+
+  li {
+    list-style:none;
+    display:inline-block;
+
+    a {
+      color: rgba(255,255,255,0.4);
+      transition: color 0.3s;
+      font-weight: 300;
+      margin-left: 1.25rem;
+
+      &:hover {
+        color: rgba(255,255,255,1);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "braid-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Bird",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jekyll": "0.0.0",
+    "gulp-sass": "^1.3.3",
+    "run-sequence": "^1.1.0"
+  }
+}
