@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include post_header.html %}
+    <div class="container post">
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <div class="by-line inline">
+          <p>by {{ page.author }}</p>
+        </div>
+        {% if page.tags %}
+        <div class="tags inline">
+          <p> Posted in
+          {% for tag in page.tags %}
+          <span>{{ tag }}</span>
+          {% endfor %}
+          </p>
+        </div>
+        {% endif %}
+        <div class="date inline">
+          <p>{{ page.date | date: '%-d %b %Y' }}</p>
+        </div>
+      </div>
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

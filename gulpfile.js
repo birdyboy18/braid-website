@@ -30,7 +30,7 @@ gulp.task('sass', function(){
     browsers: ['last 2 versions'],
     cascade: true
   }))
-  .pipe(csso())
+  //.pipe(csso())
   .pipe(gulp.dest('./src/css'));
 });
 

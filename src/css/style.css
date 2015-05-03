@@ -36,28 +36,28 @@ body {
 /*================================
 TYPOGRAPHY
 =================================*/
-.h1, .h2, .h3, .h4 {
+.h1, .post h1, .h2, .post h2, .h3, .post h3, .h4, .post h4 {
   font-weight: 400; }
 
-.h1 {
+.h1, .post h1 {
   padding: 0 0 0 0;
   font-size: 3rem;
   line-height: 4.5rem;
   margin: 3rem 0 1.5rem 0; }
 
-.h2 {
+.h2, .post h2 {
   padding: 0 0 0 0;
   font-size: 2.25rem;
   line-height: 3rem;
   margin: 3rem 0 1.5rem 0; }
 
-.h3 {
+.h3, .post h3 {
   padding: 0 0 0 0;
   font-size: 2rem;
   line-height: 2.25rem;
   margin: 1.5rem 0 1.5rem 0; }
 
-.h4 {
+.h4, .post h4 {
   padding: 0 0 0 0;
   font-size: 1.5rem;
   line-height: 1.5rem;
@@ -90,6 +90,10 @@ SIZE PRIMITIVES & BLOCKS
     display: table; }
   .container:after {
     clear: both; }
+
+.bordered-top {
+  padding-top: 1.5rem;
+  border-top: 1px solid #dfdfdf; }
 
 .section--padded {
   padding: 80px 0; }
@@ -186,12 +190,44 @@ MAIN STYLES
     margin: 0 0 0 0; }
     .nav ul li {
       list-style: none;
-      display: inline-block; }
+      display: inline-block;
+      position: relative;
+      margin-left: 3.125rem; }
       .nav ul li a {
         color: #fff;
         text-transform: uppercase;
-        margin-left: 3.125rem;
-        font-size: .875rem; }
+        font-size: .875rem;
+        padding-top: 8px;
+        padding-bottom: 8px; }
+        .nav ul li a:hover:after {
+          width: 50%; }
+        .nav ul li a:hover:before {
+          width: 50%; }
+        .nav ul li a:after {
+          content: '';
+          display: block;
+          position: absolute;
+          border-top: 1px solid #fff;
+          bottom: -10px;
+          left: 50%;
+          width: 0;
+          height: 1px;
+          transition: width 0.3s; }
+        .nav ul li a:before {
+          content: '';
+          display: block;
+          position: absolute;
+          border-top: 1px solid #fff;
+          bottom: -10px;
+          right: 50%;
+          width: 0;
+          height: 1px;
+          transition: width 0.3s; }
+        .nav ul li a.current:after, .nav ul li a.current:before {
+          width: 50%; }
+
+.no-hover:hover:after, .no-hover:hover:before {
+  display: none; }
 
 .hero {
   width: 100%;
@@ -209,7 +245,8 @@ MAIN STYLES
 
 .hero__sub-text {
   margin: 0 0 0 0;
-  font-weight: 300; }
+  font-weight: 300;
+  line-height: 1.5em; }
 
 .hero__btn {
   margin-top: 4.5rem;
@@ -338,6 +375,84 @@ MAIN STYLES
       margin-left: 1.25rem; }
       .footer-nav li a:hover {
         color: white; }
+
+/*================================
+POST STYLES
+=================================*/
+.inline {
+  display: inline-block; }
+
+.post {
+  max-width: 640px;
+  margin-top: 100px;
+  margin-bottom: 100px; }
+  .post p {
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    line-height: 1.7em;
+    font-weight: 300; }
+  .post h1, .post h2, .post h3, .post h4 {
+    color: #4a4a4a; }
+
+.post-meta .by-line {
+  border-right: 1px solid #ccc;
+  margin: 0 0 10px 0;
+  padding: 0 10px 0 0; }
+  .post-meta .by-line p {
+    margin: 0 0 0 0; }
+.post-meta .tags {
+  padding: 0 10px 0 0;
+  border-right: 1px solid #ccc;
+  margin: 0 10px 0 0; }
+  .post-meta .tags p {
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0; }
+  .post-meta .tags span {
+    color: #666;
+    text-decoration: underline;
+    margin-left: 5px;
+    padding: 0 0 0 0; }
+
+.post-excerpt {
+  padding: 0 20px; }
+
+.post--title {
+  line-height: 1.5em;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0; }
+  .post--title a {
+    color: #4a4a4a; }
+    .post--title a:hover {
+      color: #5AC7AA; }
+
+.post-excerpt__by-line {
+  color: #999;
+  margin-top: .625rem; }
+
+.service-identifier {
+  font-weight: 300;
+  color: #999; }
+  .service-identifier p {
+    margin-bottom: .625rem; }
+  .service-identifier img {
+    margin-left: 5px;
+    width: 32px;
+    position: relative;
+    top: 5px; }
+
+.explore-list .list-title {
+  color: #9b9b9b;
+  font-size: 1.125rem; }
+.explore-list ul {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0; }
+  .explore-list ul li {
+    list-style: none; }
+    .explore-list ul li a {
+      color: #4a4a4a;
+      font-weight: 300; }
 
 @media screen and (min-width: 1020px) {
   .full {

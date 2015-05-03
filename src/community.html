@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<div class="background--green section--padded">
+  <div class="container section--padded align-center half">
+    <h1 class="h2 hero__text text--white">Explore our community</h1>
+    <h2 class="h4 hero__sub-text text--white">Feeling uncertain on what you could make, read some tutorials made by the community</h2>
+  </div>
+</div>
+<section class="section--padded">
+  <div class="container">
+    <h2 class="h3 text--grey align-center">Tutorials</h2>
+    {% for post in site.posts %}
+    <div class="third post-excerpt left">
+      <div class="service-identifier">
+        <p class="inline">Uses:</p>
+        {% if post.service %}
+          {% if post.service == 'youtube' %}
+            <img src="{{ site.baseurl }}/assets/images/youtube.svg" alt="" class="inline">
+          {% elsif post.service == 'google drive' %}
+            <img src="{{ site.baseurl }}/assets/images/google_drive.svg" alt="" class="inline">
+          {% elsif post.service == 'dribbble' %}
+            <img src="{{ site.baseurl }}/assets/images/dribbble.svg" alt="" class="inline">
+          {% endif %}
+        {% endif %}
+      </div>
+      <div class="media-holder">
+        <img src="http://placehold.it/800x450" alt="">
+      </div>
+      <h3 class="post--title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p class="post-excerpt__by-line text--w_light">by {{ post.author }}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="container">
+    <h2 class="h3 text--grey align-center bordered-top">Explore</h2>
+    <div class="quarter left explore-list">
+      <h4 class="list-title">Service Specific</h4>
+      <ul>
+        <li><a href="#">YouTube</a></li>
+        <li><a href="#">Google Drive</a></li>
+        <li><a href="#">Dribbble</a></li>
+        <li><a href="#">Behance</a></li>
+      </ul>
+    </div>
+    <div class="quarter left explore-list">
+      <h4 class="list-title">Technology Specific</h4>
+      <ul>
+        <li><a href="#">PHP</a></li>
+        <li><a href="#">Nodejs</a></li>
+        <li><a href="#">Angularjs</a></li>
+        <li><a href="#">Reactjs</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
