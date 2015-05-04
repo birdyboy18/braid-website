@@ -51,6 +51,7 @@ $l_green: #9ADCB9;
 $turq_green: #7ECECA;
 $d_green: #5C7E75;
 $orange: #FF9900;
+$l_orange: #FFB54A;
 
 /*================================
 TINY RESET
@@ -224,6 +225,32 @@ BUTTON STYLES
 .btn--orange {
   background: $orange;
   color: #fff;
+  position:relative;
+  transition: all 0.18s ease-in-out;
+
+  &:before {
+    content: '';
+    display: block;
+    width:100%;
+    height:100%;
+    border: 4px solid $l_orange;
+    border-radius: 3px;
+    transform: scale(1.4, 1.5);
+    transition: all 0.18s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top:-4px;
+    left:-4px;
+  }
+
+  &:hover {
+    background: $l_orange;
+    &:before {
+      transform: scale(1,1);
+      opacity: 1;
+    }
+  }
+
 }
 
 .btn--big {

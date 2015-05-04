@@ -151,7 +151,29 @@ BUTTON STYLES
 
 .btn--orange {
   background: #FF9900;
-  color: #fff; }
+  color: #fff;
+  position: relative;
+  transition: all 0.18s ease-in-out; }
+  .btn--orange:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #FFB54A;
+    border-radius: 3px;
+    -webkit-transform: scale(1.4, 1.5);
+            transform: scale(1.4, 1.5);
+    transition: all 0.18s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: -4px;
+    left: -4px; }
+  .btn--orange:hover {
+    background: #FFB54A; }
+    .btn--orange:hover:before {
+      -webkit-transform: scale(1, 1);
+              transform: scale(1, 1);
+      opacity: 1; }
 
 .btn--big {
   padding: 15px 25px; }
