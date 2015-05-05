@@ -1,0 +1,34 @@
+{
+  "name": "cash",
+  "main": [
+    "dist/cash.min.js",
+    "dist/cash.js"
+  ],
+  "version": "1.0.0",
+  "homepage": "https://github.com/kenwheeler/cash",
+  "authors": [
+    "Ken Wheeler <ken_wheeler@me.com>"
+  ],
+  "description": "Supermodel-weight jQuery replacement for modern browsers",
+  "keywords": [
+    "jquery",
+    "vanilla js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "index.html"
+  ],
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.0.0",
+    "commit": "9048421a9173ea3fcc340b5f9fb369ef5adcf4dd"
+  },
+  "_source": "git://github.com/kenwheeler/cash.git",
+  "_target": "~1.0.0",
+  "_originalSource": "cash",
+  "_direct": true
+}

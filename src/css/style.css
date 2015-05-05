@@ -476,6 +476,81 @@ POST STYLES
       color: #4a4a4a;
       font-weight: 300; }
 
+/*================================
+MODAL STYLES
+=================================*/
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: #5C7E75;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 10; }
+
+.modal {
+  width: 25%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 1.25rem;
+  z-index: 15;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s; }
+  .modal.open {
+    visibility: visible;
+    opacity: 1; }
+  .modal.open ~ .overlay {
+    visibility: visible;
+    opacity: .8; }
+  .modal input[type='submit'] {
+    background: #FF9900;
+    border: none;
+    -webkit-appearance: none;
+    padding: 15px 20px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    width: 50%;
+    margin: 1.25rem auto 1.25rem auto;
+    display: block;
+    cursor: pointer;
+    transition: all 0.15s; }
+    .modal input[type='submit']:hover {
+      background: #FFB54A; }
+    .modal input[type='submit']:focus {
+      outline: none;
+      -webkit-appearance: none; }
+
+.input-group {
+  padding: .625rem 0; }
+  .input-group label {
+    font-weight: 300;
+    font-size: .875rem;
+    text-transform: uppercase;
+    display: block; }
+  .input-group input {
+    display: block;
+    border: 2px solid #5AC7AA;
+    padding: 10px;
+    font-size: 1rem;
+    width: 100%;
+    color: #5AC7AA; }
+    .input-group input:focus {
+      outline: none;
+      background: #5AC7AA;
+      color: #fff; }
+
+.inline-block {
+  display: inline-block; }
+
 @media screen and (min-width: 1020px) {
   .full {
     width: 100%; }
