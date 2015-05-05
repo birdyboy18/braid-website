@@ -551,6 +551,31 @@ MODAL STYLES
 .inline-block {
   display: inline-block; }
 
+.message-bar {
+  position: fixed;
+  top: -60px;
+  left: 0;
+  padding: 1.25rem 0;
+  text-align: center;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 20; }
+  .message-bar p {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    color: #fff; }
+  .message-bar.show {
+    top: 0; }
+
+.message-error {
+  background: #F87182; }
+
+.message-success {
+  background: #5AC7AA; }
+
+.message-warning {
+  background: #FF9900; }
+
 @media screen and (min-width: 1020px) {
   .full {
     width: 100%; }
