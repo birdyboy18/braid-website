@@ -1,6 +1,6 @@
 <header class="header background--green">
   <div class="container">
-    <a href="/" class="logo left">
+    <a href="/community" class="logo left">
       <img src="{{ '/assets/images/logo@2x.png' | prepend: site.baseUrl }}" alt="braid.io logo">
     </a>
     <nav class="nav right">
@@ -9,7 +9,7 @@
         {% assign URL = page.url | replace: '.html', '' %}
         <li><a {% if URL == link.url %} class="current" {% endif %} href="{{ link.url }}">{{ link.text }}</a></li>
         {% endfor %}
-        <li><a class="btn btn--orange no-hover" href="#">Sign Up</a></li>
+        <li><a class="btn btn--orange no-hover js-sign-up" href="#">Sign Up</a></li>
       </ul>
     </nav>
   </div>
